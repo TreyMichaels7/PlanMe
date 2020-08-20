@@ -1,0 +1,104 @@
+{
+    "groups": [
+        {
+            "front": {
+                "title": "Basketball Group",
+                "image": {
+                    "src": "img/Basketball.jpg",
+                    "alt": "A basketball"
+                },
+                "text": "This group plays basketball at the IMA",
+            },
+            "back": {
+                "title": "Members",
+                "members": [
+                    "Jordan",
+                    "Joe",
+                    "Bob"
+                ]
+            }
+        },
+
+        {
+            "front": {
+                "title": "Concert Group",
+                "image": {
+                    "src": "img/concert.jpg",
+                    "alt": "People at a concert"
+                },
+                "text": "This group goes to concerts",
+            },
+            "back": {
+                "title": "Members",
+                "members": [
+                    "Josh",
+                    "George",
+                    "Jill"
+                ]
+            }
+        },
+
+        {
+            "front": {
+                "title": "BBQ Group",
+                "image": {
+                    "src": "img/bbq.jpg",
+                    "alt": "Ribs on a grill"
+                },
+                "text": "This group meets weekly to have bbqs"
+            },
+            "back": {
+                "title": "Members",
+                "members": [
+                    "Lilly",
+                    "Matt",
+                    "Bryan",
+                    "Roger"
+                ]
+            }
+        },
+
+        {
+            "front": {
+                "title": "Super Bowl Group",
+                "image": {
+                    "src": "img/superbowl.jpeg",
+                    "alt": "The Vince Lombardi trophy"
+                },
+                "text": "This group will party together for the Super Bowl"
+            },
+            "back": {
+                "title": "Members",
+                "members": [
+                    "Jimmy",
+                    "Daniel",
+                    "Kevin",
+                    "Antonio"
+                ]
+            }
+        },
+
+        {
+            "front": {
+                "title": "Soccer Group",
+                "image": {
+                    "src": "img/soccer.jpg",
+                    "alt": "A soccer ball at the back of the goal's net"
+                },
+                "text": "his group plays soccer at the IMA fields"
+            },
+            "back": {
+                "title": "Members",
+                "members": [
+                    "Areeb",
+                    "Katie",
+                    "Jen",
+                    "Jack"
+                ]
+            }
+        }
+
+    ]
+
+}
+  

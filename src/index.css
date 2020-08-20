@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); 
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.info {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* https://unsplash.com/photos/Yb-n0JHlsWY */
+    background-image: url("/img/nightlife.jpg");
+    height: 1000px;
+    color: gold;
+}
+
+.home-title {
+    margin-top: 60px;
+    font-size: 5.25rem;
+}
+
+.home-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.button-group {
+    text-align: center;
+    margin: 0.5rem;
+    margin-top: 2rem;
+}
+
+#signUp, #findEvents {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 150px;
+}
+
+.index-image {
+    border: 5px solid gold;
+    width: 600px;
+    height: 400px;
+}
+
+footer {
+    padding-top: 20px;
+    border-top: 1px solid gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    background-color: #080e21;
+    color: gold;
+}
+
+.logo {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50px;
+    width: auto;
+    margin-right: 1em;
+}
+
+.navigation-bar {
+    height: 100px;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gold;
+    background-color: #080e21;
+    width: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-group {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.navigation-link {
+    color: gold;
+    font-size: 1.5em;
+    margin-right: 1em;
+    margin-left: 1em;
+    opacity: 1;
+}
+
+.focusCard {
+    box-shadow: 2px 2px 0px grey;
+    background-color: #080e21;
+    color: white;
+}
+
+/* for the popup linebreak */
+.display-linebreak {
+    white-space: pre-line;
+  }
+
+/* transition hover ease here and
+* subsequent ones are taken from
+* https://hiddlespearium.tumblr.com/
+*/
+.navigation-link:hover {
+    transition: all 1s ease; 
+    -webkit-transition: all 1s ease;
+    opacity: 35%;
+    text-decoration: underline;
+}
+
+.button-link {
+    color: black;
+}
+
+.table-row {
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 15px;
+    min-height: 100px;
+    height: auto;
+    display: flex;
+    box-shadow: 4px 4px 4px black;
+    align-items: center;
+}
+
+.table-row:hover {
+    box-shadow: 2px 2px 0px grey;
+    background-color: #080e21;
+    color: white;
+}
+
+#listView {
+    margin-top: 20px;
+    text-align: center;
+    align-items: stretch;
+    height: auto;
+    width: 100%;
+}
+
+#listView h2 {
+    color: darkgray;
+}
+
+.cell {
+    text-align: center;
+    padding-left: 10px;
+    width: 25%;
+}
+
+.required {
+    border: 2px solid red;
+}
+
+.event-heading {
+    padding-top: 40px;
+    text-align: center;
+    color: #080e21;
+}
+
+.events-main {
+    background-color: #EEEEEE;
+    min-height: 1000px;
+    padding: 20px;
+}
+
+.signup-main {
+    display: flex;
+    justify-content: center;
+    background-color: #EEEEEE;
+    min-height: 700px;
+    height: auto;
+    padding: 40px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.profile-heading {
+    font-size: 2em;
+}
+
+.events-forms {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.event-img {
+    border-radius: 20%;
+    width: 75px;
+    height: 75px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 80%;
+}
+
+.proposal {
+    padding: 20px 20px 20px 20px;
+    background-color: #EEEEEE;
+}
+
+.hidden {
+    display: none;
+}
+
+#search, #addEvent {
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.demo-app {
+  padding-top: 20px;
+  border-radius: 20px;
+  background-color: white;
+  overflow: auto;
+}
+
+/* Calendar */
+/* FONT IMPORTS */
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+.icon {
+  font-family: 'Material Icons', serif;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+
+VARIABLES
+
+:root {
+  --main-color: #1a8fff;
+  --text-color: #777;
+  --text-color-light: #ccc;
+  --border-color: #eee;
+  --bg-color: #f9f9f9;
+  --neutral-color: #fff;
+}
+
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+/* GRID */
+
+.row {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.row-middle {
+  align-items: center;
+}
+
+.col {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.col-start {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.col-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.col-end {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+
+@media (max-width: 598px) {
+
+    #signUp, #findEvents {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .home-title {
+        margin-top: 40px;
+        font-size: 3.25rem;
+    }
+
+    .home-subtitle {
+        font-size: 0.75rem;
+    }
+
+    .index-image {
+        width: 300px;
+        height: 200px;
+    }
+
+    .info {
+        /* https://unsplash.com/photos/IHj0xtWtLKE */
+        /* background-image: url("/img/nightlife_small.jpg"); */
+        padding: 10px;
+        height: 700px;
+    }
+
+    .logo {
+        border: 1px solid black;
+        border-radius: 50%;
+        height: 40px;
+        width: auto;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+
+    .navigation-bar {
+        justify-content: space-around;
+    }
+
+    .navigation-link {
+        font-size: 1.1em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    .events-main {
+        min-height: 800px;
+    }
+
+    .row {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row-heading {
+        display: none;
+    }
+
+    .cell {
+      padding: 5px;
+    }
+
+    .table-row {
+        display: flex;
+        justify-content: center;
+        border: 1px solid black;
+        box-shadow: none;
+        font-size: 0.75em;
+    }
+
+    .table-row:hover {
+        box-shadow: none;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    .profile-heading {
+        font-size: 1.5em;
+    }
+}
+
+.flex-container {
+    height: 500px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #eeeeee;
+    align-items: center;
+}
+
+/* GROUPS */
+.card-img-top {
+    width: 200px;
+    height: 150px;
+    border: 1px solid black;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5%;
+    width: 350px;
+    height: 330px;
+}
+
+.card-front {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-back {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.card-title {
+    font-size: 2rem;;
+    padding-top: 0%;
+    margin-bottom: 6px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.card-subtitle {
+    margin-bottom: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.groups-main {
+    background-color: #eeeeee;
+    min-height: 700px;
+    padding-bottom: 30px;
+    height: auto;
+}
+
+.group-info {
+    line-height: 0px;
+}
+
+.group-heading {
+    line-height: 0px;
+}
+
+.group-title {
+    font-size: 2.5rem;
+    padding-top: 40px;
+}
+
+.card-columns {
+    display: flex;
+    flex-direction: column;
+}
+
+.group-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    background-color: #eeeeee;
+}
+
+.search-bar {
+    width: 80%;
+}
+
+.search-layout {
+    height: 800px;
+    background-color: #eeeeee;
+}
+
+.map-position {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.map-container {
+    border: 10px solid gold;
+    align-self: center;
+    width: 80%;
+    height: 600px;
+}
+
+.map-container-empty {
+    align-self: center;
+    width: 80%;
+    height: 600px;
+}
+
+.adjustSpace {
+    margin-top: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+@media (min-width: 768px) {
+    .card {
+        margin: 10px;
+        box-shadow: 10px 10px 5px grey;
+    }
+
+    .card:hover {
+        box-shadow: 5px 5px 0px grey;
+    }
+
+    .group-layout {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (min-width: 1890px) {
+    .groups-main {
+        height: auto;
+    }
+}
+
+@media (max-width: 450px) {
+  .mini-hidden {
+    display: none;
+  }
+
+  .table-row {
+      padding: 10px;
+      padding-right: 30px;
+  }
+}
